@@ -16,13 +16,6 @@ def physics_no_chemistry
   FROM
     nobels
   WHERE
-    yr IN (
-      SELECT 
-        subject, yr
-        FROM
-          nobels
-        WHERE
-          subject IN ('Physics', 'Chemistry')
-    )
+    subject = 'Physics' AND 
   SQL
 end
